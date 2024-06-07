@@ -12,9 +12,10 @@
             @foreach($posts as $post)
                 <div class='post'>
                     <h2 class='title'>
-			<a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-		    </h2>
-                    <p class='body'>{{ $post->body }}</p
+			            <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+		            </h2>
+                    <p class='body'>{{ $post->body }}</p>
+                    <a href='/posts/{{ $post->id }}/edit'>編集</a>
                 </div>
             @endforeach
         </div>
