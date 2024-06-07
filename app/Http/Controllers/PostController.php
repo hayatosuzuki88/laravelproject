@@ -23,6 +23,12 @@ class PostController extends Controller
 	    return view('posts.create');
     }
 
+
+    public function edit(Post $post)
+    {
+        return view('posts.edit')->with(['post' => $post]);
+    }
+    
     public function store(Post $post, PostRequest $request)
     {
 	    $input = $request['post'];
